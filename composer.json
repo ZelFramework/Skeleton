@@ -1,34 +1,35 @@
 {
-  "name": "zelframework/skeleton",
-  "version": "v0.1.0",
-  "type": "project",
-  "license": "MIT",
-  "minimum-stability": "stable",
-  "authors": [
-    {
-      "name": "Britzell",
-      "email": "britzel99@gmail.com"
+    "name": "zelframework/skeleton",
+    "version": "v0.1.0",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Britzell",
+            "email": "britzel99@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "zelframework/kernel": "dev-master",
+        "zelframework/router": "dev-master",
+        "zelframework/console": "dev-master",
+        "zelframework/debug": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "ZelFramework\\Console\\CreateProject::init"
+        ]
     }
-  ],
-  "require": {
-    "php": "^7.2",
-    "zelframework/kernel": "dev-master",
-    "zelframework/router": "dev-master",
-    "zelframework/console": "dev-master"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "App\\Tests\\": "tests/"
-    }
-  },
-  "scripts": {
-    "post-create-project-cmd": [
-      "ZelFramework\\Console\\CreateProject::init"
-    ]
-  }
 }
